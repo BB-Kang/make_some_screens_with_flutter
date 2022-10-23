@@ -24,6 +24,9 @@ samples, guidance on mobile development, and a full API reference.
 - navigation & header, drawer skeleton
 
 
+![simulator_screenshot_7FFC6425-843A-4149-9503-7E2E8129DAE4](https://user-images.githubusercontent.com/54828276/197393139-19b1f1f9-ce5f-41ed-a611-86ac1165f32d.png)
+
+
 ### 2nd week(10/29)
 
 - group chat skeleton

@@ -95,8 +95,62 @@ class Page1 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Page 1'),
-        centerTitle: true,
+        // Here we take the value from the MyHomePage object that was created by
+        // the App.build method, and use it to set our appbar title.
+        title: Text(
+          "운동 시설",
+          textAlign: TextAlign.center,
+          style: TextStyle(
+            fontWeight: FontWeight.bold,
+            color: Colors.white,
+          ),
+        ),
+        // leading: IconButton(
+        //   icon: Icon(Icons.menu),
+        //   onPressed: () => {print("hi1")},
+        // ),
+        actions: [
+          IconButton(
+            icon: Icon(Icons.shopping_cart),
+            onPressed: () => {print("hi2")},
+          ),
+          IconButton(
+            icon: Icon(Icons.search),
+            onPressed: () => {print("hi3")},
+          ),
+        ],
+      ),
+      drawer: Drawer(
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children: [
+            UserAccountsDrawerHeader(
+              accountName: Text("Kang"),
+              accountEmail: Text("asdf123@naver.com"),
+              currentAccountPicture: CircleAvatar(
+                backgroundColor: Colors.pink,
+              ),
+            ),
+            ListTile(
+              leading: Icon(
+                Icons.home,
+                color: Colors.grey,
+              ),
+              title: Text("Home"),
+              onTap: () => {print("to go home!")},
+              trailing: Icon(Icons.add),
+            ),
+            ListTile(
+              leading: Icon(
+                Icons.settings,
+                color: Colors.grey,
+              ),
+              title: Text("Setting"),
+              onTap: () => {print("to go settings!")},
+              trailing: Icon(Icons.add),
+            )
+          ],
+        ),
       ),
       body: Center(
         child: FutureBuilder(

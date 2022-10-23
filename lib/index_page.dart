@@ -14,13 +14,13 @@ class IndexPage extends StatelessWidget {
             textAlign: TextAlign.center,
             style: TextStyle(
               fontWeight: FontWeight.bold,
-              color: Colors.yellow,
+              color: Colors.white,
             ),
           ),
-          leading: IconButton(
-            icon: Icon(Icons.menu),
-            onPressed: () => {print("hi1")},
-          ),
+          // leading: IconButton(
+          //   icon: Icon(Icons.menu),
+          //   onPressed: () => {print("hi1")},
+          // ),
           actions: [
             IconButton(
               icon: Icon(Icons.shopping_cart),
@@ -31,6 +31,38 @@ class IndexPage extends StatelessWidget {
               onPressed: () => {print("hi3")},
             ),
           ],
+        ),
+        drawer: Drawer(
+          child: ListView(
+            padding: EdgeInsets.zero,
+            children: [
+              UserAccountsDrawerHeader(
+                accountName: Text("Kang"),
+                accountEmail: Text("asdf123@naver.com"),
+                currentAccountPicture: CircleAvatar(
+                  backgroundColor: Colors.pink,
+                ),
+              ),
+              ListTile(
+                leading: Icon(
+                  Icons.home,
+                  color: Colors.grey,
+                ),
+                title: Text("Home"),
+                onTap: () => {print("to go home!")},
+                trailing: Icon(Icons.add),
+              ),
+              ListTile(
+                leading: Icon(
+                  Icons.settings,
+                  color: Colors.grey,
+                ),
+                title: Text("Setting"),
+                onTap: () => {print("to go settings!")},
+                trailing: Icon(Icons.add),
+              )
+            ],
+          ),
         ),
         body: Center(
           // Center is a layout widget. It takes a single child and positions it
@@ -80,3 +112,45 @@ class IndexPage extends StatelessWidget {
         ));
   }
 }
+
+// class DrawerPage extends StatelessWidget {
+//   const DrawerPage({ Key? key }) : super(key: key);
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//  drawer: Drawer(
+//           child: ListView(
+//             padding: EdgeInsets.zero,
+//             children: [
+//               UserAccountsDrawerHeader(
+//                 accountName: Text("Kang"),
+//                 accountEmail: Text("asdf123@naver.com"),
+//                 currentAccountPicture: CircleAvatar(
+//                   backgroundColor: Colors.pink,
+//                 ),
+//               ),
+//               ListTile(
+//                 leading: Icon(
+//                   Icons.home,
+//                   color: Colors.grey,
+//                 ),
+//                 title: Text("Home"),
+//                 onTap: () => {print("to go home!")},
+//                 trailing: Icon(Icons.add),
+//               ),
+//               ListTile(
+//                 leading: Icon(
+//                   Icons.settings,
+//                   color: Colors.grey,
+//                 ),
+//                 title: Text("Setting"),
+//                 onTap: () => {print("to go settings!")},
+//                 trailing: Icon(Icons.add),
+//               )
+//             ],
+//           ),
+//         ),
+//     )
+//   }
+// }

@@ -98,8 +98,8 @@ class _MyHomePageState extends State<MyHomePage> {
                   width: 250,
                   height: 40,
                   child: ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.lightGreen),
+                      // style: ElevatedButton.styleFrom(
+                      //     backgroundColor: Colors.lightGreen),
                       child: const Text('회원가입'),
                       onPressed: () {
                         Navigator.push(

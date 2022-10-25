@@ -1,5 +1,3 @@
-import 'dart:ffi';
-
 import 'package:flutter/material.dart';
 import 'package:make_some_screens/memberships/member_page.dart';
 import 'package:make_some_screens/reservations/reservation_page.dart';
@@ -33,14 +31,14 @@ class _HomeState extends State<Home> {
     ClassPage(),
     ReservationPage(),
     MembershipPage(),
+    InfluencerPage(),
     ProfilePage(),
-    InfluencerPage()
   ];
   final _navigatorKeyList =
       List.generate(5, (index) => GlobalKey<NavigatorState>());
   int _currentIndex = 0;
-  static const defaultColor = Colors.blueAccent;
-  static const selectedColor = Colors.amberAccent;
+  static const defaultColor = Colors.grey;
+  static const selectedColor = Colors.blueAccent;
 
   @override
   Widget build(BuildContext context) {

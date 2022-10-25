@@ -8,7 +8,7 @@ class ReservationPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Page 2'),
+        title: const Text('내 예약현황'),
         centerTitle: true,
       ),
       body: const WebView(

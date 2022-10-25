@@ -7,14 +7,14 @@ class ProfilePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Page4'),
+        title: const Text('Profile'),
         centerTitle: true,
       ),
       body: FutureBuilder(
         future: Future.delayed(const Duration(seconds: 2)),
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.done) {
-            return const Text('Page4');
+            return const Text('Profile');
           } else {
             return const Center(child: CircularProgressIndicator());
           }

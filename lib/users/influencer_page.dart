@@ -8,7 +8,7 @@ class InfluencerPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Page 6'),
+        title: const Text('인플루언서'),
         centerTitle: true,
       ),
       body: const WebView(
